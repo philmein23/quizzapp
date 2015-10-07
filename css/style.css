@@ -1,67 +1,94 @@
-body {
-  font-family: 'Fjalla One', sans-serif;
-  background-color: black;
+/*---------------------------------------------------------------------------------
+   Common Styles
+---------------------------------------------------------------------------------*/
+
+
+/*float styles*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
+/** Custom Body Styles */
+
+body {
+    font-family: 'Ruda', sans-serif;
+    background-color: black;
+}
+
+
+/** Header Styles */
+
 .headerbar {
-  width:100%;
-  height:500px;
-  background-image: url(../img/bk2.jpg);
-  background-repeat:no-repeat;
-  background-position: 0% 70%;
-  background-size: cover;
-  position: relative;
-
-
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/bk5.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 87%;
+    background-size: cover;
+    opacity: 0.6;
 }
 
 h1 {
-  text-align:center;
-  text-transform: uppercase;
-  color: white;
-
+    position: relative;
+    bottom: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Ruda', sans-serif;
+    font-size: 3em;
 }
-
 
 .quiz {
-  margin-left: 90px;
-  float:left;
-  width:40%;
-  margin-left: 200px;
+    margin-left: 90px;
+    float: left;
+    width: 40%;
+    margin-left: 200px;
+    margin-top:-70px;
 }
 
-.quiz, p {
-  color:white;
-  font-size: 1.5em;
-
+.quiz,
+p {
+    color: white;
+    font-size: 1.5em;
 }
 
 form p {
-  text-align:left;
+    text-align: left;
 }
 
 .pictures {
-  float: right;
-  margin-right: 200px;
-  margin-top: 50px;
-
+    float: left;
+    margin-top: -10px;
+    margin-left:80px;
 }
 
-
 img {
-  width:50%;
-  height:50%;
-
+    width: 50%;
+    height: 50%;
 }
 
 .submit {
-  border-radius: 5px;
-  text-shadow: 0;
-  border:none;
+    border-radius: 5px;
+    text-shadow: 0;
+    border: none;
 }
 
 .submit:hover {
-  background-color: #848181;
+    background-color: #848181;
 }
-
