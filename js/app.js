@@ -34,11 +34,12 @@ $(document).ready(function() {
     ]
 
 
-    $('.quiz').on('click', function(event) {
-      event.preventDefault();
-      /* Act on the event */
+    $('.submit').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
 
-      $('p').fadeIn(1000).html(quiz[0].question);
+        $('p').html(quiz[0].question);
+        $('p').append("<br />  <input type='radio' name='dj' value='dj'" + quiz[0].answers[0] + "/>");
 
     });
 
