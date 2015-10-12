@@ -84,6 +84,11 @@ img {
     height: 50%;
 }
 
+.answer {
+  float:left;
+  color:white;
+}
+
 .submit {
     border-radius: 5px;
     text-shadow: 0;

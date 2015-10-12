@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+
+
     var quiz = [{
             question: "Which DJ is owns the record label 'SubCulture'?",
             answers: ["Armin Van Buuren", "JOC", "Bryan Kearney", "Simon Patterson"],
@@ -33,20 +35,53 @@ $(document).ready(function() {
 
     ]
 
+    var counter = 0;
+    var correctGuess = 0;
 
-    $('.submit').on('click', function(event) {
+
+
+    $('.start').click(function(event) {
+        event.preventDefault();
+        /* Act on the event */
+        $('p').empty();
+         $('.answer').empty();
+        counter = 0;
+        currentQuestion();
+
+
+    });
+
+    $('#questionnaire').on('click', ".submit", function(event) {
         event.preventDefault();
         /* Act on the event */
 
-        $('p').html(quiz[0].question);
-        $('p').append("<br />  <input type='radio' name='dj' value='dj'" + quiz[0].answers[0] + "/>");
+        compareAnswers();
+        counter++
+        $('p').empty();
+
+        currentQuestion();
+
 
     });
 
 
+    function currentQuestion() {
+        $('p').append(quiz[counter].question + "<br /><br />")
+
+        for (var i = 0; i < quiz[counter].answers.length; i++) {
+            $('p').append("<input type='radio' name='" + quiz[counter].answers[i] + "' value='" + quiz[counter].answers[i] + "' />" + "<span class='result'>" + quiz[counter].answers[i] + "</span><br />")
+        }
+
+    }
+
+    function compareAnswers() {
+        var answerChosen = $("input[type='radio']:checked").val()
+        if (answerChosen === quiz[counter].correctAnswer) {
+            $(".answer").append("<h3>You are correct!</h3>")
+        } else {
+            $(".answer").append("<h3>You are wrong!</h3>")
+        }
+    }
 
 
-
-
-
-})
+});
