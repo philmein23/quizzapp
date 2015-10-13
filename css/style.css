@@ -52,7 +52,7 @@ h1 {
     color: white;
     font-family: 'Ruda', sans-serif;
     font-size: 3em;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .quiz {
@@ -60,7 +60,7 @@ h1 {
     float: left;
     width: 40%;
     margin-left: 200px;
-    margin-top:-70px;
+    margin-top: -70px;
 }
 
 .quiz,
@@ -73,10 +73,13 @@ form p {
     text-align: left;
 }
 
-.pictures {
+.answer {
+    background-color: #848181;
+    display: none;
     float: left;
+    color: white;
     margin-top: -10px;
-    margin-left:80px;
+    margin-left: 80px;
 }
 
 img {
@@ -84,15 +87,17 @@ img {
     height: 50%;
 }
 
-.answer {
-  float:left;
-  color:white;
-}
-
 .submit {
     border-radius: 5px;
     text-shadow: 0;
     border: none;
+}
+
+.start {
+    border-radius: 5px;
+    text-shadow: 0;
+    border: none;
+}
 }
 
 .submit:hover {
