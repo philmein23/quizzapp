@@ -1,13 +1,12 @@
-$(document).ready(function() {
-
+$(document).ready(function () {
 
 
     var quiz = [{
-            question: "Which DJ is owns the record label 'SubCulture'?",
-            answers: ["Armin Van Buuren", "JOC", "Bryan Kearney", "Simon Patterson"],
-            correctAnswer: "JOC"
+        question: "Which DJ is owns the record label 'SubCulture'?",
+        answers: ["Armin Van Buuren", "JOC", "Bryan Kearney", "Simon Patterson"],
+        correctAnswer: "JOC"
 
-        },
+    },
 
         {
             question: "Which DJ is best known for his remix of 'Need You Now'?",
@@ -39,13 +38,12 @@ $(document).ready(function() {
     var correctGuess = 0;
 
 
-
-    $("a.close").click(function() {
+    $("a.close").click(function () {
         $(".answer").fadeOut('slow');
     });
 
 
-    $('.start').click(function(event) {
+    $('.start').click(function (event) {
         event.preventDefault();
         /* Act on the event */
         $('p').empty();
@@ -56,17 +54,16 @@ $(document).ready(function() {
 
     });
 
-    $('#questionnaire').on('click', ".submit", function(event) {
+    $('#questionnaire').on('click', ".submit", function (event) {
         event.preventDefault();
         /* Act on the event */
 
         compareAnswers();
 
-        counter++
+        counter++;
         $('p').empty();
 
         currentQuestion();
-
 
 
     });
@@ -79,7 +76,7 @@ $(document).ready(function() {
 
         } else {
             $('p').empty();
-            $('p').append("You scored a total of " + correctGuess + " correct answers on the quiz!");
+            $('p').append("You scored a total  of " + correctGuess + " correct answers on the quiz!")
             correctGuess = 0;
         }
 
@@ -102,6 +99,7 @@ $(document).ready(function() {
         }
     }
 
+    ß
 
 
 });

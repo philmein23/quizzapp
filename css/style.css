@@ -2,7 +2,6 @@
    Common Styles
 ---------------------------------------------------------------------------------*/
 
-
 /*float styles*/
 
 .clearfix:before,
@@ -23,14 +22,12 @@
     box-sizing: border-box;
 }
 
-
 /** Custom Body Styles */
 
 body {
     font-family: 'Ruda', sans-serif;
     background-color: black;
 }
-
 
 /** Header Styles */
 
@@ -98,6 +95,7 @@ img {
     text-shadow: 0;
     border: none;
 }
+
 }
 
 .submit:hover {
