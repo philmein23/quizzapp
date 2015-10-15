@@ -54,7 +54,7 @@ $(document).ready(function () {
     $('#questionnaire').on('click', ".submit", function (event) {
         event.preventDefault();
         /* Act on the event */
-
+        $('.answer').empty();
         compareAnswers();
 
         counter++;
