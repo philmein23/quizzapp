@@ -38,14 +38,11 @@ $(document).ready(function () {
     var correctGuess = 0;
 
 
-    $("a.close").click(function () {
-        $(".answer").fadeOut('slow');
-    });
-
 
     $('.start').click(function (event) {
         event.preventDefault();
         /* Act on the event */
+        $('h2').empty();
         $('p').empty();
         $('.answer').empty();
         counter = 0;
@@ -68,7 +65,6 @@ $(document).ready(function () {
 
     });
 
-
     function currentQuestion() {
 
         if (counter < 5) {
@@ -82,7 +78,7 @@ $(document).ready(function () {
 
 
         for (var i = 0; i < quiz[counter].answers.length; i++) {
-            $('p').append("<input type='radio' name='" + quiz[counter].answers[i] + "' value='" + quiz[counter].answers[i] + "' />" + "<span class='result'>" + quiz[counter].answers[i] + "</span><br />");
+            $('p').append("<input type='radio' class='dj'  name='" + quiz[counter].answers[i] + "' value='" + quiz[counter].answers[i] + "' />" + "<span class='result'>" + quiz[counter].answers[i] + "</span><br />");
 
 
         }
@@ -99,7 +95,7 @@ $(document).ready(function () {
         }
     }
 
-    ß
+
 
 
 });
