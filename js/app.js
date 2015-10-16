@@ -38,7 +38,6 @@ $(document).ready(function () {
     var correctGuess = 0;
 
 
-
     $('.start').click(function (event) {
         event.preventDefault();
         /* Act on the event */
@@ -69,6 +68,11 @@ $(document).ready(function () {
 
         if (counter < 5) {
             $('p').append(quiz[counter].question + " <br /><br />")
+            for (var i = 0; i < quiz[counter].answers.length; i++) {
+                $('p').append("<input type='radio' class='dj'  name='" + quiz[counter].answers[i] + "' value='" + quiz[counter].answers[i] + "' />" + "<span class='result'>" + quiz[counter].answers[i] + "</span><br />");
+
+
+            }
 
         } else {
             $('p').empty();
@@ -76,12 +80,6 @@ $(document).ready(function () {
             correctGuess = 0;
         }
 
-
-        for (var i = 0; i < quiz[counter].answers.length; i++) {
-            $('p').append("<input type='radio' class='dj'  name='" + quiz[counter].answers[i] + "' value='" + quiz[counter].answers[i] + "' />" + "<span class='result'>" + quiz[counter].answers[i] + "</span><br />");
-
-
-        }
 
     }
 
@@ -94,8 +92,6 @@ $(document).ready(function () {
             $(".answer").append("<h3>You are wrong!</h3>").fadeIn('fast');
         }
     }
-
-
 
 
 });
